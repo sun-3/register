@@ -112,7 +112,7 @@ public class ProfileServiceImpl implements ProfileService {
 				"    </body>\n" +
 				" <center><button onclick=\"edit()\">Edit</button></center> "+
 				"<script>function edit(){" +
-				"window.location.href = \"http://localhost:8080/"+profile.getUsername()+"\";" +
+				"window.location.href = \"http://localhost:8080/profile/"+profile.getUsername()+"\";" +
 				"}</script>"+
 				"</html>\n" +
 				"\n" +
@@ -257,10 +257,10 @@ public class ProfileServiceImpl implements ProfileService {
 				"formElem.addEventListener('formdata', (e) => {\n" +
 				"    let data = e.formData;\n" +
 				"    let request = new XMLHttpRequest();\n" +
-				"    request.open(\"POST\", \"http://localhost:8080/profile\");\n" +
+				"    request.open(\"POST\", \"http://localhost:8080/profile/api\");\n" +
 				"    request.send(data);\n" +
 				"    setTimeout(function(){\n" +
-				"        window.location.href = \"http://localhost:8080/get_profile/\" + document.getElementById(\"username\").value;\n" +
+				"        window.location.href = \"http://localhost:8080/profile/view/\" + document.getElementById(\"username\").value;\n" +
 				"    }, 1000);\n" +
 				";\n" +
 				"\n" +
